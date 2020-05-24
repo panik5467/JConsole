@@ -14,6 +14,7 @@ import java.util.Random;
 public class CPUUsage {
 	public static void main(String[] args) throws IOException, InterruptedException {
 		GenerateRandomNumner generator = new GenerateRandomNumner();
+		generator.setName("Random Generator");
 		generator.start();
 	}
 }
@@ -23,9 +24,8 @@ public class CPUUsage {
  * CPU time and User time in JConsole.
  */
 class GenerateRandomNumner extends Thread {
-
 	@Override
-	public void run() {
+	public void run() {	
 		File file = new File("random_numbers.txt");
  		Random rand = new Random();
  		try (BufferedWriter br = new BufferedWriter(new FileWriter(file))) {
