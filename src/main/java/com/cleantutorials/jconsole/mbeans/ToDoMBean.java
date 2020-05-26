@@ -4,7 +4,8 @@ public interface ToDoMBean {
 
 	public void storeTask(String taskName);
 
-	public String getTask();
+	public String dequeueTask();
 
 	public int getTasksLeft();
+	
 }

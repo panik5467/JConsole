@@ -13,7 +13,7 @@ public class ToDo implements ToDoMBean {
 	}
 
 	@Override
-	public String getTask() {
+	public String dequeueTask() {
 		return taskQueue.remove();
 	}
 
